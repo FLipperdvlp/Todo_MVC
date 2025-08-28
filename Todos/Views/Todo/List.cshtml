@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract TODO - Мои задачи</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+<body>
+    <div class="bg-elements"></div>
+
+    <div class="todo-layout">
+        <header class="todo-header">
+            <div class="user-info">
+                <div class="user-avatar">П</div>
+                <div>
+                    <h2>Пользователь</h2>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Добро пожаловать</p>
+                </div>
+            </div>
+            <a href="auth.html" class="logout-btn">Выйти</a>
+        </header>
+
+        <div class="todo-container">
+            <div class="add-todo">
+                <form class="add-todo-form">
+                    <input type="text" class="add-todo-input" placeholder="Добавить новую задачу..." required>
+                    <input type="datetime-local" class="deadline-input" required>
+                    <button type="submit" class="add-btn">Добавить</button>
+                </form>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Всего</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Активных</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Завершено</div>
+                </div>
+            </div>
+
+            <div class="todo-list">
+                <!-- Активные задачи -->
+                <div class="todo-item">
+                    <div class="todo-checkbox"></div>
+                    <div class="todo-meta">
+                        <div class="todo-id">#1001</div>
+                        <div class="todo-text">Подготовить презентацию для встречи с клиентом</div>
+                        <div class="todo-dates">
+                            <span class="todo-created">Создано: 25.08.2025, 14:30</span>
+                            <span class="todo-deadline overdue">Дедлайн: 28.08.2025, 16:00</span>
+                        </div>
+                    </div>
+                    <div class="category-badge category-work">Работа</div>
+                    <div class="todo-actions">
+                        <a href="#" class="action-btn delete-btn" title="Удалить">×</a>
+                    </div>
+                </div>
+
+                <div class="todo-item">
+                    <div class="todo-checkbox"></div>
+                    <div class="todo-meta">
+                        <div class="todo-id">#1002</div>
+                        <div class="todo-text">Купить продукты на неделю</div>
+                        <div class="todo-dates">
+                            <span class="todo-created">Создано: 26.08.2025, 09:15</span>
+                            <span class="todo-deadline today">Дедлайн: 28.08.2025, 20:00</span>
+                        </div>
+                    </div>
+                    <div class="category-badge category-personal">Личное</div>
+                    <div class="todo-actions">
+                        <a href="#" class="action-btn delete-btn" title="Удалить">×</a>
+                    </div>
+                </div>
+
+                <div class="todo-item">
+                    <div class="todo-checkbox"></div>
+                    <div class="todo-meta">
+                        <div class="todo-id">#1003</div>
+                        <div class="todo-text">Прочитать новую книгу по дизайну</div>
+                        <div class="todo-dates">
+                            <span class="todo-created">Создано: 27.08.2025, 12:45</span>
+                            <span class="todo-deadline">Дедлайн: 05.09.2025, 23:59</span>
+                        </div>
+                    </div>
+                    <div class="category-badge category-personal">Личное</div>
+                    <div class="todo-actions">
+                        <a href="#" class="action-btn delete-btn" title="Удалить">×</a>
+                    </div>
+                </div>
+
+                <div class="todo-item">
+                    <div class="todo-checkbox"></div>
+                    <div class="todo-meta">
+                        <div class="todo-id">#1004</div>
+                        <div class="todo-text">Отправить отчет до конца недели</div>
+                        <div class="todo-dates">
+                            <span class="todo-created">Создано: 28.08.2025, 08:20</span>
+                            <span class="todo-deadline overdue">Дедлайн: 30.08.2025, 17:00</span>
+                        </div>
+                    </div>
+                    <div class="category-badge category-urgent">Срочно</div>
+                    <div class="todo-actions">
+                        <a href="#" class="action-btn delete-btn" title="Удалить">×</a>
+                    </div>
+                </div>
+
+                <div class="todo-item">
+                    <div class="todo-checkbox"></div>
+                    <div class="todo-meta">
+                        <div class="todo-id">#1005</div>
+                        <div class="todo-text">Записаться к стоматологу</div>
+                        <div class="todo-dates">
+                            <span class="todo-created">Создано: 28.08.2025, 11:10</span>
+                            <span class="todo-deadline">Дедлайн: 02.09.2025, 18:00</span>
+                        </div>
+                    </div>
+                    <div class="category-badge category-personal">Личное</div>
+                    <div class="todo-actions">
+                        <a href="#" class="action-btn delete-btn" title="Удалить">×</a>
+                    </div>
+                </div>
+
+                <!-- Завершенные задачи -->
+                <div class="todo-item completed">
+                    <div class="todo-checkbox checked"></div>
+                    <div class="todo-meta">
+                        <div class="todo-id">#1006</div>
+                        <div class="todo-text">Проверить электронную почту</div>
+                        <div class="todo-dates">
+                            <span class="todo-created">Создано: 27.08.2025, 07:30</span>
+                            <span class="todo-deadline">Дедлайн: 28.08.2025, 10:00</span>
+                        </div>
+                    </div>
+                    <div class="category-badge category-work">Работа</div>
+                    <div class="todo-actions">
+                        <a href="#" class="action-btn delete-btn" title="Удалить">×</a>
+                    </div>
+                </div>
+
+                <div class="todo-item completed">
+                    <div class="todo-checkbox checked"></div>
+                    <div class="todo-meta">
+                        <div class="todo-id">#1007</div>
+                        <div class="todo-text">Обновить профиль в LinkedIn</div>
+                        <div class="todo-dates">
+                            <span class="todo-created">Создано: 26.08.2025, 16:20</span>
+                            <span class="todo-deadline">Дедлайн: 28.08.2025, 12:00</span>
+                        </div>
+                    </div>
+                    <div class="category-badge category-work">Работа</div>
+                    <div class="todo-actions">
+                        <a href="#" class="action-btn delete-btn" title="Удалить">×</a>
+                    </div>
+                </div>
+
+                <div class="todo-item completed">
+                    <div class="todo-checkbox checked"></div>
+                    <div class="todo-meta">
+                        <div class="todo-id">#1008</div>
+                        <div class="todo-text">Позвонить родителям</div>
+                        <div class="todo-dates">
+                            <span class="todo-created">Создано: 25.08.2025, 19:45</span>
+                            <span class="todo-deadline">Дедлайн: 27.08.2025, 21:00</span>
+                        </div>
+                    </div>
+                    <div class="category-badge category-personal">Личное</div>
+                    <div class="todo-actions">
+                        <a href="#" class="action-btn delete-btn" title="Удалить">×</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
