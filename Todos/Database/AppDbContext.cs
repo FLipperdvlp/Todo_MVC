@@ -5,8 +5,8 @@ namespace Todos.Database;
 
 public class AppDbContext : DbContext
 {
-    public System.Data.Entity.DbSet<User> Users { get; set; } = null!;
-    public System.Data.Entity.DbSet<Todo> Todos { get; set; } = null!;
+    public DbSet<User> Users { get; set; } = null!;
+    public DbSet<Todo> Todos { get; set; } = null!;
 
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {

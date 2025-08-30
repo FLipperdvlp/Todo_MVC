@@ -35,7 +35,8 @@ public class TodoService(AppDbContext dbContext) : ITodoService
         
         if(todo is null)
             throw new Exception("Todo not found");
-        
+
+        todo.IsCompleted = !todo.IsCompleted;
         await dbContext.SaveChangesAsync();
 
         return todo;

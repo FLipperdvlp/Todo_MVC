@@ -35,7 +35,7 @@ public class TodoConfiguration : IEntityTypeConfiguration<Todo>
                 UserId = 1,
                 IsCompleted = true,
                 Text = "Love programming",
-                ExpiredAt = DateTime.Now.AddDays(3)
+                ExpiredAt = DateTime.Now.AddDays(-2)
             });
     }
 }
